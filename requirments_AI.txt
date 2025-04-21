@@ -1,0 +1,33 @@
+用python语言实现一个DB2 for LUW的MCP Server，这个MCP Server需要实现一下功能：
+1. 建立.env文件，并从此文件中读取数据库连接所需要的环境变量相关的信息,例如：
+- ip: 192.168.0.145
+- port: 60004
+- username: db2user
+- password: pytc@2024
+- dbname: tpcc
+
+2. 实现一下工具：
+    - 建立数据库连接
+      Name: connect_db
+      Desc: Eastablish a connection with target db
+      Parameter: ip,port,username,password,dbname
+
+    - 执行通用SQL查询 
+      Name: run_sql
+      Desc: execute a read-only sql query, and return to user
+      Paramesters: "SQL statement"
+
+    - 调用存储过程 "call_sp"
+      Name: "call_sp"
+      Desc: call a stored procedure or function
+      Paramesters: stored procedure name and parameters
+
+3. 这个工具的提示词如下：
+
+4. 
+
+其他要求：
+    1. 必须使用官方的sdk来实现，https://github.com/modelcontextprotocol/python-sdk
+    2. 不要使用任何硬编码，预定义或predefine，mock等模拟或假
+    3. 命名标准，server命名成：server.py, client脚本命名为：client.py
+    4. 请使用uv来管理包和虚拟环境
