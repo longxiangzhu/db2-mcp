@@ -7,49 +7,29 @@ A Model Context Protocol (MCP) server for interacting with DB2 for LUW databases
 - Establish connections to DB2 databases
 - Execute SQL queries
 - Call stored procedures
-- Simple client for testing
 
-## Prerequisites
-
-- Python 3.8+
-- UV package manager
-- DB2 for LUW database
 
 ## Setup
 
 1. Clone this repository
 2. Configure your database connection in the `.env` file
-3. Install dependencies using UV
+3. Install dependencies 
 
-```bash
-# Install UV if you don't have it
-curl -sSf https://astral.sh/uv/install.sh | bash
+```python
+python3 -m venv db2_x86_env
 
-# Create a virtual environment and install dependencies
-uv venv
-uv pip install -r requirements.txt
+source db2_x86_env/bin/activate && pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org ibm-db python-dotenv==1.0.0 "mcp @ git+https://github.com/modelcontextprotocol/python-sdk.git"
+
 ```
 
 ## Usage
 
 ### Starting the server
 
-```bash
-python server.py
 ```
+source ./db2_x86_env/bin/activate && python server.py
 
-This will start the MCP server on http://localhost:8000.
-
-### Using the client
-
-```bash
-python client.py
 ```
-
-Example commands:
-- "Connect to the DB2 database"
-- "Run SELECT * FROM SYSCAT.TABLES FETCH FIRST 5 ROWS ONLY"
-- "Call the stored procedure 'SAMPLE_SP' with parameters"
 
 ## Environment Variables
 
@@ -63,6 +43,57 @@ DB2_USERNAME=your_username
 DB2_PASSWORD=your_password
 ```
 
+## MCP config for Cursor or cherry studio 
+
+### Cursor
+```json
+{
+  "mcpServers": {
+    "db2-mcp": {
+      "autoApprove": [
+        "connect_db"
+      ],
+      "disabled": false,
+      "timeout": 60,
+      "command": "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/python_x86_wrapper.sh",
+      "args": [
+        "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py"
+      ],
+      "env": {
+        "DB2_DATABASE": "tpcc",
+        "DB2_HOSTNAME": "192.168.0.100",
+        "DB2_PORT": "50000",
+        "DB2_USERNAME": "db2user",
+        "DB2_PASSWORD": "db2user@2025"
+      },
+      "transportType": "stdio"
+    }
+  }
+}
+```
+
+### Cherry Studio 
+
+```json
+  "ECvXtBighSOVs1JMd1GBy": {
+      "name": "db2-mcp",
+      "type": "stdio",
+      "description": "",
+      "isActive": true,
+      "command": "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/python_x86_wrapper.sh",
+      "args": [
+        "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py"
+      ],
+      "env": {
+        "DB2_DATABASE": "tpcc",
+        "DB2_HOSTNAME": "192.168.0.100",
+        "DB2_PORT": "50000",
+        "DB2_USERNAME": "db2user",
+        "DB2_PASSWORD": "db2user@2025"
+      },
+    }
+```
+
 ## MCP Functions
 
 ### connect_db
@@ -73,4 +104,3 @@ Executes a read-only SQL query and returns the results.
 
 ### call_sp
 Calls a stored procedure or function with the specified parameters.
-
