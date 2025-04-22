@@ -17,31 +17,20 @@ A Model Context Protocol (MCP) server for interacting with DB2 for LUW databases
 
 ```python
 python3 -m venv db2_x86_env
-
-source db2_x86_env/bin/activate && pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org ibm-db python-dotenv==1.0.0 "mcp @ git+https://github.com/modelcontextprotocol/python-sdk.git"
-
+source db2_x86_env/bin/activate 
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
 ```
 
 ## Usage
 
 ### Starting the server
 
-```
-source ./db2_x86_env/bin/activate && python server.py
+```shell
+source ./db2_x86_env/bin/activate && python3 server.py
+./python_x86_wrapper.sh server.py  # (for Apple M1/M2 chips)
 
 ```
 
-## Environment Variables
-
-Configure the following variables in your `.env` file:
-
-```
-DB2_DATABASE=your_database
-DB2_HOSTNAME=your_hostname
-DB2_PORT=your_port
-DB2_USERNAME=your_username
-DB2_PASSWORD=your_password
-```
 
 ## MCP config for Cursor or cherry studio 
 
@@ -94,7 +83,7 @@ DB2_PASSWORD=your_password
     }
 ```
 
-## MCP Functions
+## MCP Tools
 
 ### connect_db
 Establishes a connection with the target DB2 database.

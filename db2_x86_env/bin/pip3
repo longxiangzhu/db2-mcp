@@ -1,4 +1,4 @@
-#!/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/bin/python
+#!/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys

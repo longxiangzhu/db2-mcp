@@ -1,0 +1,661 @@
+2025-04-22 11:29:35,840 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:29:35,840 - db2-mcp - INFO - Database config: Host=192.168.1.145, Port=60004, DB=tpcc
+2025-04-22 11:29:35,840 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:29:35,840 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:29:35,840 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.1.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:29:35,905 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2025-04-22 11:29:35,906 - db2-mcp - INFO - Initial database connection result: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:29:35,907 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:29:35,908 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:29:35,909 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:29:35,909 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:29:35,910 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:29:35,910 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:29:35,911 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:29:35,911 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:29:35,911 - db2-mcp - WARNING - Database connection not established in resource request. Connecting...
+2025-04-22 11:29:35,911 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.1.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:29:35,916 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2025-04-22 11:29:35,917 - db2-mcp - INFO - Resource request connection result: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:29:35,917 - db2-mcp - ERROR - Failed to connect to database in resource request: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:29:35,917 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [],
+  "count": 0,
+  "error": "Database connection failed"
+}
+2025-04-22 11:29:35,917 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x1038a6330>
+2025-04-22 11:29:35,918 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:29:35,920 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:29:42,514 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:29:42,515 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:29:42,515 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:29:42,515 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:29:42,515 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:29:45,531 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:29:45,532 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:29:45,537 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:29:45,538 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:29:45,539 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:29:45,539 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:29:45,540 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:29:45,540 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:29:45,540 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:29:45,540 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:29:45,540 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:29:45,873 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:29:45,873 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:29:45,874 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x10711de50>
+2025-04-22 11:29:45,874 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:29:45,876 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:30:06,859 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:30:06,860 - db2-mcp - INFO - Database config: Host=192.168.1.145, Port=60004, DB=tpcc
+2025-04-22 11:30:06,860 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:30:06,860 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:30:06,860 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.1.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:30:06,881 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2025-04-22 11:30:06,882 - db2-mcp - INFO - Initial database connection result: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:30:06,883 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:30:06,883 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:30:06,884 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:30:06,885 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:30:06,885 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:30:06,885 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:30:06,885 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:30:06,885 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:30:06,885 - db2-mcp - WARNING - Database connection not established in resource request. Connecting...
+2025-04-22 11:30:06,885 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.1.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:30:06,890 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2025-04-22 11:30:06,890 - db2-mcp - INFO - Resource request connection result: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:30:06,890 - db2-mcp - ERROR - Failed to connect to database in resource request: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:30:06,890 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [],
+  "count": 0,
+  "error": "Database connection failed"
+}
+2025-04-22 11:30:06,891 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x103c4e330>
+2025-04-22 11:30:06,891 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:30:06,893 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:30:06,900 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:30:09,247 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x101e8d810>
+2025-04-22 11:30:09,248 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-04-22 11:30:09,248 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListResourcesRequest
+2025-04-22 11:30:09,248 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Listing resources
+2025-04-22 11:30:09,249 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:30:09,823 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x103f6bad0>
+2025-04-22 11:30:09,824 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-04-22 11:30:09,824 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ReadResourceRequest
+2025-04-22 11:30:09,824 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Getting resource
+2025-04-22 11:30:09,824 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:30:09,824 - db2-mcp - WARNING - Database connection not established in resource request. Connecting...
+2025-04-22 11:30:09,824 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.1.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:30:09,901 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081
+2025-04-22 11:30:09,901 - db2-mcp - INFO - Resource request connection result: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:30:09,901 - db2-mcp - ERROR - Failed to connect to database in resource request: {'status': 'error', 'message': 'Connection error: [IBM][CLI Driver] SQL30081N  A communication error has been detected. Communication protocol being used: "TCP/IP".  Communication API being used: "SOCKETS".  Location where the error was detected: "192.168.1.145".  Communication function detecting the error: "connect".  Protocol specific error code(s): "61", "*", "*".  SQLSTATE=08001 SQLCODE=-30081'}
+2025-04-22 11:30:09,903 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:31:40,552 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:31:40,553 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:31:40,553 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:31:40,553 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:31:40,553 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:31:40,861 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:31:40,861 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:31:40,866 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:31:40,866 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:31:40,867 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:31:40,867 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:31:40,868 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:31:40,868 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:31:40,868 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:31:40,868 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:31:40,868 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:31:41,008 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:31:41,009 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:31:41,009 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:31:41,010 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:31:41,010 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:31:41,010 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:31:41,010 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:31:41,011 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x1050b9e50>
+2025-04-22 11:31:41,011 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:31:41,013 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:31:45,985 - db2-mcp - ERROR - Error running server: unhandled errors in a TaskGroup (1 sub-exception)
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 340, in <module>
+  |     mcp.run()
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/fastmcp/server.py", line 158, in run
+  |     anyio.run(self.run_stdio_async)
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/anyio/_core/_eventloop.py", line 74, in run
+  |     return async_backend.run(func, args, {}, backend_options)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2310, in run
+  |     return runner.run(wrapper())
+  |            ^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  |     return future.result()
+  |            ^^^^^^^^^^^^^^^
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2298, in wrapper
+  |     return await func(*args)
+  |            ^^^^^^^^^^^^^^^^^
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/fastmcp/server.py", line 459, in run_stdio_async
+  |     async with stdio_server() as (read_stream, write_stream):
+  |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 231, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/stdio.py", line 83, in stdio_server
+  |     async with anyio.create_task_group() as tg:
+  |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/stdio.py", line 86, in stdio_server
+    |     yield read_stream, write_stream
+    |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/fastmcp/server.py", line 460, in run_stdio_async
+    |     await self._mcp_server.run(
+    |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/lowlevel/server.py", line 483, in run
+    |     async with AsyncExitStack() as stack:
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 745, in __aexit__
+    |     raise exc_details[1]
+    |   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 728, in __aexit__
+    |     cb_suppress = await cb(*exc_details)
+    |                   ^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/shared/session.py", line 210, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 772, in __aexit__
+    |     raise BaseExceptionGroup(
+    | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/shared/session.py", line 324, in _receive_loop
+      |     await self._received_request(responder)
+      |   File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/db2_x86_env/lib/python3.11/site-packages/mcp/server/session.py", line 163, in _received_request
+      |     raise RuntimeError(
+      | RuntimeError: Received request before initialization was complete
+      +------------------------------------
+2025-04-22 11:31:49,358 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:31:49,359 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:31:49,359 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:31:49,359 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:31:49,359 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:31:49,744 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:31:49,745 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:31:49,751 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:31:49,751 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:31:49,752 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:31:49,752 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:31:49,753 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:31:49,753 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:31:49,753 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:31:49,753 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:31:49,753 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:31:49,878 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:31:49,878 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:31:49,879 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:31:49,879 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:31:49,879 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:31:49,879 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:31:49,879 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:31:49,885 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x105045e50>
+2025-04-22 11:31:49,885 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:31:49,888 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:31:51,564 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:31:51,565 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:31:51,565 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:31:51,565 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:31:51,565 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:31:51,890 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:31:51,890 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:31:51,891 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:31:51,892 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:31:51,892 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:31:51,893 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:31:51,893 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:31:51,893 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:31:51,893 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:31:51,893 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:31:51,893 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:31:52,027 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:31:52,028 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:31:52,028 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:31:52,028 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:31:52,028 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:31:52,028 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:31:52,028 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:31:52,031 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x105561e50>
+2025-04-22 11:31:52,031 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:31:52,038 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:31:52,043 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:31:53,227 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x105575810>
+2025-04-22 11:31:53,227 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-04-22 11:31:53,227 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListResourcesRequest
+2025-04-22 11:31:53,227 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Listing resources
+2025-04-22 11:31:53,228 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:31:53,973 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x10890f790>
+2025-04-22 11:31:53,973 - mcp.server.lowlevel.server - INFO - Processing request of type ReadResourceRequest
+2025-04-22 11:31:53,973 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ReadResourceRequest
+2025-04-22 11:31:53,973 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Getting resource
+2025-04-22 11:31:53,973 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:31:53,973 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:31:54,095 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:31:54,095 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:31:54,095 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:31:54,095 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:31:54,096 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:31:54,096 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:31:54,096 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:32:16,284 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:32:16,284 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:32:16,284 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:32:16,284 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:32:16,284 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:32:16,543 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:32:16,543 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:32:16,548 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:32:16,548 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:32:16,549 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:32:16,550 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:32:16,550 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:32:16,550 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:32:16,550 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:32:16,550 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:32:16,550 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:32:16,678 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:32:16,678 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:32:16,680 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x1074b5d80>
+2025-04-22 11:32:16,680 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:32:16,683 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:32:16,686 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:32:16,687 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0e250>
+2025-04-22 11:32:16,687 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-04-22 11:32:16,687 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListToolsRequest
+2025-04-22 11:32:16,687 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:32:16,706 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0f290>
+2025-04-22 11:32:16,706 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:32:16,706 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:32:16,706 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:32:35,740 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0edd0>
+2025-04-22 11:32:35,741 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:32:35,741 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:32:35,741 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:33:12,899 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x10750b150>
+2025-04-22 11:33:12,906 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:33:12,907 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:33:12,908 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:33:19,837 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x10750b210>
+2025-04-22 11:33:19,837 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:33:19,837 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:33:19,837 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:33:19,838 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0f710>
+2025-04-22 11:33:19,839 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-22 11:33:19,839 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type CallToolRequest
+2025-04-22 11:33:19,840 - db2-mcp - DEBUG - Attempting connection with: DATABASE=SAMPLE;HOSTNAME=db2-mcp;PORT=50000;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:33:19,939 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL1336N  The remote host "db2-mcp" was not found.  SQLSTATE=08001 SQLCODE=-1336
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL1336N  The remote host "db2-mcp" was not found.  SQLSTATE=08001 SQLCODE=-1336
+2025-04-22 11:33:19,940 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:33:55,150 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0e690>
+2025-04-22 11:33:55,153 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:33:55,153 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:33:55,154 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:02,373 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0f290>
+2025-04-22 11:34:02,373 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:02,373 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:02,374 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:02,375 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0e2d0>
+2025-04-22 11:34:02,375 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-22 11:34:02,375 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type CallToolRequest
+2025-04-22 11:34:02,376 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:34:02,751 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:34:02,753 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:16,948 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0efd0>
+2025-04-22 11:34:16,948 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:16,948 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:16,948 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:24,739 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x10750a4d0>
+2025-04-22 11:34:24,739 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:24,739 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:24,739 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:24,740 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0ed90>
+2025-04-22 11:34:24,740 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-22 11:34:24,740 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type CallToolRequest
+2025-04-22 11:34:24,740 - db2-mcp - DEBUG - Attempting connection with: DATABASE=SAMPLE;HOSTNAME=db2-mcp;PORT=50000;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:34:24,760 - db2-mcp - ERROR - Connection error: [IBM][CLI Driver] SQL1336N  The remote host "db2-mcp" was not found.  SQLSTATE=08001 SQLCODE=-1336
+Traceback (most recent call last):
+  File "/Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/server.py", line 58, in connect_to_db
+    conn = ibm_db.connect(conn_string, "", "")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception: [IBM][CLI Driver] SQL1336N  The remote host "db2-mcp" was not found.  SQLSTATE=08001 SQLCODE=-1336
+2025-04-22 11:34:24,763 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:44,593 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0e250>
+2025-04-22 11:34:44,594 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:44,594 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:44,594 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:51,646 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x1074e5590>
+2025-04-22 11:34:51,647 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:51,647 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:51,647 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:51,648 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x10750a4d0>
+2025-04-22 11:34:51,648 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-22 11:34:51,648 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type CallToolRequest
+2025-04-22 11:34:51,778 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:58,962 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0ee10>
+2025-04-22 11:34:58,962 - mcp.server.lowlevel.server - INFO - Processing request of type PingRequest
+2025-04-22 11:34:58,962 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type PingRequest
+2025-04-22 11:34:58,962 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:34:58,963 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x109e0fe50>
+2025-04-22 11:34:58,963 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-04-22 11:34:58,963 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type CallToolRequest
+2025-04-22 11:34:59,638 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:35:33,231 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:35:33,231 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:35:33,231 - db2-mcp - INFO - Starting DB2 MCP - Logs will be written to /Users/zlx/Desktop/zlx/3.Coding/AI/db2-mcp/logs/db2_mcp.log
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Database config: Host=192.168.0.145, Port=60004, DB=tpcc
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Creating FastMCP instance...
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:35:33,232 - db2-mcp - INFO - Establishing initial database connection...
+2025-04-22 11:35:33,232 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:35:33,232 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:35:33,232 - db2-mcp - DEBUG - Attempting connection with: DATABASE=tpcc;HOSTNAME=192.168.0.145;PORT=60004;PROTOCOL=TCPIP;UID=db2user;PWD=***
+2025-04-22 11:35:33,699 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:35:33,699 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:35:33,699 - db2-mcp - INFO - Successfully connected to DB2 database tpcc on 192.168.0.145:60004
+2025-04-22 11:35:33,700 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:35:33,700 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:35:33,700 - db2-mcp - INFO - Initial database connection result: {'status': 'success', 'message': 'Successfully connected to DB2 database tpcc on 192.168.0.145:60004'}
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:35:33,701 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Initializing server 'FastMCP'
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListToolsRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for CallToolRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourcesRequest
+2025-04-22 11:35:33,702 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:35:33,702 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ReadResourceRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for PromptListRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for GetPromptRequest
+2025-04-22 11:35:33,702 - mcp.server.lowlevel.server - DEBUG - Registering handler for ListResourceTemplatesRequest
+2025-04-22 11:35:33,702 - db2-mcp - INFO - FastMCP instance created successfully
+2025-04-22 11:35:33,703 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:35:33,703 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:35:33,704 - db2-mcp - INFO - Added connect_db tool
+2025-04-22 11:35:33,704 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:35:33,704 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:35:33,704 - db2-mcp - INFO - Added run_sql tool
+2025-04-22 11:35:33,705 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:35:33,705 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:35:33,705 - db2-mcp - INFO - Added call_sp tool
+2025-04-22 11:35:33,706 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:35:33,706 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:35:33,706 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Adding resource
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Added tablespace resource
+2025-04-22 11:35:33,706 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:35:33,706 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:35:33,706 - db2-mcp - DEBUG - get_tablespace_info called
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:35:33,706 - db2-mcp - INFO - Executing query in resource request: SELECT TBSPACE FROM SYSCAT.TABLESPACES
+2025-04-22 11:35:33,887 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:35:33,888 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:35:33,888 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:35:33,887 - db2-mcp - INFO - Resource request query result status: success
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:35:33,888 - db2-mcp - DEBUG - Query message: SQL query executed successfully
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Found 9 tablespaces in resource request
+2025-04-22 11:35:33,888 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:35:33,889 - db2-mcp - INFO - Resource request sample record keys: ['TBSPACE']
+2025-04-22 11:35:33,889 - db2-mcp - INFO - Resource request sample record: {'TBSPACE': 'DAT16K'}
+2025-04-22 11:35:33,889 - db2-mcp - INFO - Extracted tablespace names in resource request: ['DAT16K', 'DAT_32K', 'IBMDB2SAMPLEREL', 'IBMDB2SAMPLEXML', 'PYTC_DATA', 'SYSCATSPACE', 'SYSTOOLSPACE', 'TEMPSPACE1', 'USERSPACE1']
+2025-04-22 11:35:33,889 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:35:33,889 - db2-mcp - INFO - Test tablespace info: {
+  "tablespaces": [
+    "DAT16K",
+    "DAT_32K",
+    "IBMDB2SAMPLEREL",
+    "IBMDB2SAMPLEXML",
+    "PYTC_DATA",
+    "SYSCATSPACE",
+    "SYSTOOLSPACE",
+    "TEMPSPACE1",
+    "USERSPACE1"
+  ],
+  "count": 9
+}
+2025-04-22 11:35:33,891 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x105b4dd80>
+2025-04-22 11:35:33,891 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x102d61d80>
+2025-04-22 11:35:33,891 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:35:33,891 - db2-mcp - INFO - Available tools: <coroutine object FastMCP.list_tools at 0x104e29d80>
+2025-04-22 11:35:33,892 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:35:33,892 - db2-mcp - INFO - Server is starting...
+2025-04-22 11:35:33,897 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:35:33,897 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:35:33,897 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-04-22 11:35:33,901 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x102dad9d0>
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListToolsRequest
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x105b98710>
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-04-22 11:35:33,902 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListPromptsRequest
+2025-04-22 11:35:33,903 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x105557290>
+2025-04-22 11:35:33,903 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:35:33,903 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2025-04-22 11:35:33,903 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListResourcesRequest
+2025-04-22 11:35:33,903 - mcp.server.fastmcp.resources.resource_manager - DEBUG - Listing resources
+2025-04-22 11:35:33,903 - mcp.server.lowlevel.server - DEBUG - Response sent
+2025-04-22 11:36:31,333 - mcp.server.lowlevel.server - DEBUG - Received message: <mcp.shared.session.RequestResponder object at 0x105575810>
+2025-04-22 11:36:31,334 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-04-22 11:36:31,334 - mcp.server.lowlevel.server - DEBUG - Dispatching request of type ListPromptsRequest
+2025-04-22 11:36:31,335 - mcp.server.lowlevel.server - DEBUG - Response sent
