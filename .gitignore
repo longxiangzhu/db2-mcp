@@ -1,1 +1,1 @@
-db2_x86_env/\n.DS_Store\n*.logs\ndist/\nbuild/\n.env
+db2_x86_env/\n.DS_Store\n*.logs\ndist/\nbuild/\n.env/\n.gitignore
