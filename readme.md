@@ -17,8 +17,11 @@ A Model Context Protocol (MCP) server for interacting with DB2 for LUW databases
 
 ```python
 python3 -m venv db2_x86_env
+
 source db2_x86_env/bin/activate 
+
 pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
+
 ```
 
 ## Usage
@@ -27,6 +30,7 @@ pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r req
 
 ```shell
 source ./db2_x86_env/bin/activate && python3 server.py
+
 ./python_x86_wrapper.sh server.py  # (for Apple M1/M2 chips)
 
 ```
